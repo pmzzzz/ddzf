@@ -72,7 +72,7 @@ class Sww(BigSpider):
         uls = soup.find_all('ul', attrs={'class': "tab-item"})
         tabs = ['国务院信息', '今日重庆', '部门动态', '通知公告', '行业信息', '履职依据', '政策解读']
         datas = []
-        now = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()) 
+        now = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
         for ul, tab in zip(uls, tabs):
             a = ul.find_all('a')
             span = ul.find_all('span')
@@ -106,7 +106,7 @@ class Qsww(BigSpider):
         ul = soup.find_all('ul', class_="tab-item")[0]
         a = ul.find_all('a')
         span = ul.find_all('span')
-        now = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()) 
+        now = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
         datas = []
         for aa, ss in zip(a, span):
             data = {'标题': aa.attrs['title'], '链接': self.url + aa.attrs['href'][1:], '显示': aa.text,
@@ -121,7 +121,7 @@ class Qsww(BigSpider):
         uls = soup.find_all('ul', attrs={'class': "tab-item"})
         tabs = ['动态要闻', '履职依据']
         datas = []
-        now = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()) 
+        now = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
         for ul, tab in zip(uls, tabs):
             a = ul.find_all('a')
             span = ul.find_all('span')
@@ -155,7 +155,7 @@ class Jjxxw(BigSpider):
         ul = soup.find_all('ul', class_="tab-item")[2]
         a = ul.find_all('a')
         span = ul.find_all('span')
-        now = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()) 
+        now = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
 
         datas = []
         for aa, ss in zip(a, span):
@@ -172,7 +172,7 @@ class Jjxxw(BigSpider):
         uls = soup.find_all('ul', attrs={'class': "tab-item"})
         tabs = ['国务院信息', '今日重庆', '信经动态', '新闻发布', '政策文件', '公示公告']
         datas = []
-        now = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()) 
+        now = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
         for ul, tab in zip(uls, tabs):
             a = ul.find_all('a')
             span = ul.find_all('span')
@@ -206,7 +206,7 @@ class Qjjxxw(BigSpider):
         ul = soup.find_all('ul', class_="tab-item")[0]
         a = ul.find_all('a')
         span = ul.find_all('span')
-        now = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()) 
+        now = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
 
         datas = []
         for aa, ss in zip(a, span):
@@ -222,7 +222,7 @@ class Qjjxxw(BigSpider):
         uls = soup.find_all('ul', attrs={'class': "tab-item"})
         tabs = ['动态要闻', '履职依据']
         datas = []
-        now = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()) 
+        now = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
         for ul, tab in zip(uls, tabs):
             a = ul.find_all('a')
             span = ul.find_all('span')
@@ -256,7 +256,7 @@ class Rlsbj(BigSpider):
         ul = soup.find_all('ul', class_="tab-item")[2]
         a = ul.find_all('a')
         span = ul.find_all('span')
-        now = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()) 
+        now = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
 
         datas = []
         for aa, ss in zip(a, span):
@@ -273,7 +273,7 @@ class Rlsbj(BigSpider):
         uls = soup.find_all('ul', attrs={'class': "tab-item"})
         tabs = ['国务院信息', '今日重庆', '通知公告', '工作动态', '政策解读', '事业单位公开招聘', '人事考试', '专技人才', '新闻头条', '公示信息', '社会保险', '人才社会服务']
         datas = []
-        now = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()) 
+        now = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
         for ul, tab in zip(uls, tabs):
             a = ul.find_all('a')
             span = ul.find_all('span')
@@ -307,7 +307,7 @@ class Qrlsbj(Qsww):
         ul = soup.find_all('ul', class_="tab-item")[0]
         a = ul.find_all('a')
         span = ul.find_all('span')
-        now = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()) 
+        now = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
         datas = []
         for aa, ss in zip(a, span):
             data = {'标题': aa.attrs['title'], '链接': self.url + aa.attrs['href'][1:], '显示': aa.text,
@@ -339,7 +339,7 @@ class Kjj(BigSpider):
         ul = soup.find_all('ul', class_="tab-item")[2]
         a = ul.find_all('a')
         span = ul.find_all('span')
-        now = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()) 
+        now = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
 
         datas = []
         for aa, ss in zip(a, span):
@@ -356,7 +356,7 @@ class Kjj(BigSpider):
         tabs = ['工作动态', '科技动态', '通知公告', '国务院信息', '今日重庆', '国务院文件', '市政府文件', '履职依据', '科技政策解读', '政协提案办理情况公开',
                 '人大代表建议办理情况公开', '预算/决算']
         datas = []
-        now = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()) 
+        now = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
         for ul, tab in zip(uls, tabs):
             a = ul.find_all('a')
             span = ul.find_all('span')
@@ -391,7 +391,7 @@ class Customs(BigSpider):
 
         tabs = ['本关动态', '图片新闻', '本关公告', '政策解读', '政府采购', '拍卖信息']
         datas = []
-        now = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()) 
+        now = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
         for ul, tab in zip(uls, tabs):
             a = ul.find_all('a')
             span = ul.find_all('span')
@@ -423,7 +423,7 @@ class Qxtax(BigSpider):
         uls = soup.find_all('ul')[3:5]
         tabs = ['工作动态', '通知公告']
         datas = []
-        now = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()) 
+        now = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
         for ul, tab in zip(uls, tabs):
             a = ul.find_all('a')
             dt = ul.find_all('dt')
@@ -456,7 +456,7 @@ class Qiyi(BigSpider):
         ul = soup.find_all('ul', class_="topicList")[0]
         a = ul.find_all('a')
         span = ul.find_all('span', class_="date")
-        now = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()) 
+        now = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
 
         datas = []
         for aa, ss in zip(a, span):
@@ -475,6 +475,11 @@ class Qiyi(BigSpider):
 
     def search(self, kw):
         pass
+
+
+class Parser:
+    def __init__(self, data):
+        self.data = data
 
 
 # 别人

@@ -50,7 +50,7 @@ if __name__ == '__main__':
                     source = i.source
                     r = filter_by_date(datas, [str(datetime.date.today()),
                                                str(datetime.date.today() + datetime.timedelta(-1))])
-                    r = filter_by_kw(r, '政策、补贴、职业、技能'.split('、'))
+                    r = filter_by_kw(r, conf['yewu']['keywords'].split('、'))
                     links = form_message(r, source)
                     message = get_message(links)
                     if r:
